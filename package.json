@@ -27,5 +27,16 @@
     "setupFiles": [
       "/Projects/react_tdd/TDD/tests/setup.js"
     ]
+  },
+  "detox": {
+    "test-runner": "jest",
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/TDD.app",
+        "build": "xcodebuild -project ios/TDD.xcodeproj -scheme TDD -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "type": "ios.simulator",
+        "name": "iPhone X"
+      }
+    }
   }
 }
